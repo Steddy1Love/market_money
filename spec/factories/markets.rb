@@ -1,9 +1,11 @@
 FactoryBot.define do
   factory :market do
-    title { "MyString" }
-    author { "MyString" }
-    genre { "MyString" }
-    summary { "MyText" }
-    number_sold { 1 }
+    name { Faker::Lorem.word }
+    street { Faker::Address.street_name }
+    city { Faker::Address.city }
+    county { Faker::Address.community }
+    zip { Faker::Address.zip }
+    lat { Faker::Address.latitude }
+    lon { Faker::Address.longitude }
   end
 end
