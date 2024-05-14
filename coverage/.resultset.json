@@ -1,0 +1,39 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/market.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1715660964
+  }
+}
