@@ -14,6 +14,12 @@ VCR.configure do |config|
 end
 require 'simplecov'
 SimpleCov.start
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
 
 # Previous content of test helper now starts here
 # Requires supporting ruby files with custom matchers and macros, etc, in

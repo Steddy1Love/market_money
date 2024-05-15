@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :vendor do
+    market_vendor
+    market 
     name { "MyString" }
     description { "MyString" }
     contact_name { "MyString" }

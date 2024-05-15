@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :market do
+    vendor
+    market_vendor
     name { Faker::Lorem.word }
     street { Faker::Address.street_name }
     city { Faker::Address.city }

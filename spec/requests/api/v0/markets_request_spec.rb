@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Markets API" do
+RSpec.describe "Markets API", type: :request do
   it "sends a list of markets" do
     create_list(:market, 3)
 
