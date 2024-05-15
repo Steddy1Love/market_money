@@ -78,4 +78,19 @@ RSpec.describe "Markets API", type: :request do
     expect(market).to have_key(:state)
     expect(market[:state]).to be_a(String)
   end
+
+  it "can show error if exception is raised" do
+    id_fail = 123123123
+    id_true = create(:market).id
+
+    get "/api/v0/markets/#{id_fail}"
+
+    message = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to_not be_successful
+
+    expect(message[:errors]).to be_an(Array)
+    expect(message[:errors].first[:detail]).to eq("Couldn't find Market with 'id'=#{id_fail}")
+
+  end
 end
