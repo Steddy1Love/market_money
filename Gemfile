@@ -40,6 +40,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem "rspec-rails"
   gem "pry"
+  gem "shoulda-matchers"
   gem "simplecov", require: false, group: :test
   gem "webmock"
   gem "vcr"
