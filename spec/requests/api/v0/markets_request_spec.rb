@@ -29,13 +29,16 @@ RSpec.describe "Markets API" do
       expect(market[:county]).to be_a(String)
 
       expect(market).to have_key(:zip)
-      expect(market[:zip]).to be_an(String)
+      expect(market[:zip]).to be_a(String)
 
       expect(market).to have_key(:lat)
-      expect(market[:lat]).to be_an(String)
+      expect(market[:lat]).to be_a(String)
 
       expect(market).to have_key(:lon)
-      expect(market[:lon]).to be_an(String)
+      expect(market[:lon]).to be_a(String)
+
+      expect(market).to have_key(:state)
+      expect(market[:state]).to be_a(String)
     end
   end
 
@@ -64,12 +67,15 @@ RSpec.describe "Markets API" do
     expect(market[:county]).to be_a(String)
 
     expect(market).to have_key(:zip)
-    expect(market[:zip]).to be_an(String)
+    expect(market[:zip]).to be_a(String)
 
     expect(market).to have_key(:lat)
-    expect(market[:lat]).to be_an(String)
+    expect(market[:lat]).to be_a(String)
 
     expect(market).to have_key(:lon)
-    expect(market[:lon]).to be_an(String)
+    expect(market[:lon]).to be_a(String)
+    
+    expect(market).to have_key(:state)
+    expect(market[:state]).to be_a(String)
   end
 end
