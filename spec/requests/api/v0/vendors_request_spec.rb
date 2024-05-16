@@ -69,5 +69,23 @@ RSpec.describe "Vendors API" do
       expect(data[:errors].first[:status]).to eq("404")
       expect(data[:errors].first[:title]).to eq("Couldn't find Vendor with 'id'=1")
     end
+
+    it "will vaildate contact name and contact number" do
+      vendor_params = ({
+                      name: 'Murder Inc.',
+                      description: 'Filled with suspense.',
+                      contact_name: '',
+                      contact_phone: '',
+                      credit_accepted: true
+                    })
+      headers = {"CONTENT_TYPE" => "application/json"}
+      post "/api/v0/vendors", headers: headers, params: JSON.generate(vendor: vendor_params)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:errors].first[:title]).to eq("Validation failed: Contact name can't be blank, Contact phone can't be blank")
+    end
   end
 end

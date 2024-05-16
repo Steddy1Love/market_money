@@ -11,8 +11,15 @@ class Api::V0::VendorsController < ApplicationController
     end
   end
 
-  def create
-    render json: Vendor.create(vendor_params)
+  def create #find correct status. (refactor)
+    begin
+      vendor = Vendor.new(vendor_params)
+      vendor.save!
+  
+      render json: vendor    
+    rescue ActiveRecord::RecordInvalid => exception
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 400)).serialize_json, status: :not_found
+    end
   end
 
   private
