@@ -39,6 +39,13 @@ class Api::V0::VendorsController < ApplicationController
     end
   end
 
+  def update
+    vendor = Vendor.find(params[:id])
+    vendor.update(vendor_params)
+    
+    render json: vendor
+  end
+
   private
 
   def vendor_params

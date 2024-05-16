@@ -89,6 +89,23 @@ RSpec.describe "Vendor API", type: :request do
     end
   end
 
+  describe "User Story 6" do
+    it "can update an existing vendor" do
+      id = create(:vendor).id
+      previous_name = Vendor.last.name
+      vendor_params = { name: "Charlotte's Web" }
+      headers = {"CONTENT_TYPE" => "application/json"}
+    
+      # We include this header to make sure that these params are passed as JSON rather than as plain text
+      patch "/api/v0/vendors/#{id}", headers: headers, params: JSON.generate({vendor: vendor_params})
+      vendor = Vendor.find_by(id: id)
+    
+      expect(response).to be_successful
+      expect(vendor.name).to_not eq(previous_name)
+      expect(vendor.name).to eq("Charlotte's Web")
+    end
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a vendor id doesn't exist" do
       get "/api/v0/vendors/1"
