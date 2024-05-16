@@ -165,7 +165,6 @@
           null,
           1,
           null,
-          null,
           1,
           1,
           null,
@@ -183,6 +182,21 @@
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -214,12 +228,51 @@
           null,
           null,
           1,
+          null,
+          2,
           1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/serializers/error_serializer.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/poros/error_message.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1715817885
+    "timestamp": 1715826042
   }
 }

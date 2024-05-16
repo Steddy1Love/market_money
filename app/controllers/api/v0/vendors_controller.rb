@@ -4,6 +4,10 @@ class Api::V0::VendorsController < ApplicationController
   end
 
   def show
-    render json: Vendor.find(params[:id])
+    begin
+      render json: Vendor.find(params[:id]) 
+    rescue ActiveRecord::RecordNotFound => exception
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 404)).serialize_json, status: :not_found
+    end
   end
 end
