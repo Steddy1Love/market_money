@@ -153,7 +153,38 @@
       },
       "/Users/lj/Projects/market_money/spec/requests/api/v0/vendors_request_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
         ]
       },
       "/Users/lj/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
@@ -174,8 +205,21 @@
           1,
           null
         ]
+      },
+      "/Users/lj/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1715741868
+    "timestamp": 1715817885
   }
 }
