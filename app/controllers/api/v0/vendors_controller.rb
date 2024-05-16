@@ -19,8 +19,6 @@ class Api::V0::VendorsController < ApplicationController
         }]}, status: :not_found
     end
   end
-    render json: Vendor.all
-  end
 
   def show
     begin

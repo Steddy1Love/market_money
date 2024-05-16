@@ -32,7 +32,8 @@ RSpec.describe "Vendor API", type: :request do
     expect(response).to_not be_successful
     expect(message[:errors]).to be_an(Array)
     expect(message[:errors].first[:detail]).to eq("Couldn't find Market with 'id'=#{id}")
-
+  end
+  
   describe "User Story 4" do
     it "can get one vendor by its id" do
       id = create(:vendor).id
