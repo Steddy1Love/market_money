@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_15_014418) do
+ActiveRecord::Schema[7.1].define(version: 2023_03_30_155211) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "market_vendors", force: :cascade do |t|
-    t.bigint "market_id", null: false
-    t.bigint "vendor_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.bigint "market_id"
+    t.bigint "vendor_id"
     t.index ["market_id"], name: "index_market_vendors_on_market_id"
     t.index ["vendor_id"], name: "index_market_vendors_on_vendor_id"
   end
@@ -28,12 +26,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_014418) do
     t.string "street"
     t.string "city"
     t.string "county"
+    t.string "state"
     t.string "zip"
     t.string "lat"
     t.string "lon"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "state"
   end
 
   create_table "vendors", force: :cascade do |t|
@@ -42,8 +38,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_014418) do
     t.string "contact_name"
     t.string "contact_phone"
     t.boolean "credit_accepted"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "market_vendors", "markets"

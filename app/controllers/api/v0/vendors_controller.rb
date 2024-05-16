@@ -1,9 +1,8 @@
 class Api::V0::VendorsController < ApplicationController
   def index
-    market = Market.find(params[:market_id])
-
     begin
-      vendors_data = vendors.map do |vendor|
+      market = Market.find(params[:market_id])
+      vendors_data = market.vendors.map do |vendor|
         {
           id: vendor.id,
           name: vendor.name,
@@ -16,8 +15,8 @@ class Api::V0::VendorsController < ApplicationController
       render json: { data: vendors_data }, status: :ok
     rescue StandardError => e
       render json: { errors: [{
-            detail: "Couldn't find Market with 'id'=#{market.id}"
-        }]}
+            detail: "Couldn't find Market with 'id'=#{params[:market_id]}"
+        }]}, status: :not_found
     end
   end
 end

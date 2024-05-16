@@ -17,14 +17,6 @@
           null
         ]
       },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/market_vendor.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/vendor.rb": {
         "lines": [
           1,
@@ -36,24 +28,31 @@
           null
         ]
       },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/market_vendor.rb": {
         "lines": [
           1,
           1,
           1,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
+        "lines": [
+          1,
+          1,
           null,
+          2,
+          1,
           null,
           1,
           null,
-          0,
           null,
           null,
           null,
           null,
           null,
           null,
-          null,
-          0,
+          1,
           1,
           1,
           null,
@@ -70,6 +69,6 @@
         ]
       }
     },
-    "timestamp": 1715832434
+    "timestamp": 1715885989
   }
 }
