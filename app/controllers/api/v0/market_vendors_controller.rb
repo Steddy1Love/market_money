@@ -32,15 +32,15 @@ class Api::V0::MarketVendorsController < ApplicationController
       render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :bad_request
     end
   end
-end
+
   def destroy
     begin
       market_vendor = MarketVendor.find_by!(market_vendor_params)  
       market_vendor.destroy
   
       render json: market_vendor
-    rescue ActiveRecord::RecordNotFound => exception
-      render json: ErrorSerializer.new(ErrorMessage.new("No MarketVendor with market_id=#{market_vendor_params[:market_id]} AND vendor_id=#{market_vendor_params[:vendor_id]} exists", 404)).serialize_json, status: :not_found
+    rescue ActiveRecord::RecordNotFound => e
+      render json: ErrorSerializer.new(ErrorMessage.new("No MarketVendor with market_id=#{market_vendor_params[:market_id]} AND vendor_id=#{market_vendor_params[:vendor_id]} exists")).serialize_json, status: :not_found
     end
   end
 
