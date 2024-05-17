@@ -84,73 +84,7 @@
           null
         ]
       },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/requests/api/v0/market_vendors_request_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/requests/api/v0/markets_request_spec.rb": {
+      "/Users/lj/Projects/market_money/spec/requests/api/v0/markets_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -535,7 +469,7 @@
           null
         ]
       },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
+      "/Users/lj/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
         "lines": [
           1,
           1,
@@ -552,7 +486,13 @@
           null
         ]
       },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
+      "/Users/lj/Projects/market_money/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
         "lines": [
           1,
           1,
@@ -612,21 +552,45 @@
           2,
           1,
           null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/serializers/error_serializer.rb": {
+        "lines": [
           1,
           null,
           1,
           4,
           null,
+          null,
+          1,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/poros/error_message.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1715964462
+    "timestamp": 1715903718
   }
 }
