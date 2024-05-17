@@ -28,7 +28,12 @@ RSpec.describe "Api::V0::MarketVendors", type: :request do
         vendor_id: vendor.id
       })
 
-      post "/api/v0/market_vendors", params: JSON.generate
+      post "/api/v0/market_vendors", params: JSON.generate(market_vendor: market_vendor_params)
+
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(response).to_not be_successful
+      expect(data[:errors]).to be_a(Array)
+      expect(data[:errors].first[:detail]).to eq("Validation failed: Market must exist")
     end
   end
 end
