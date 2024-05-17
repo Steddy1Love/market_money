@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lj/Projects/market_money/app/models/market.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/market.rb": {
         "lines": [
           1,
           1,
@@ -10,51 +10,18 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/models/application_record.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/lj/Projects/market_money/spec/models/market_vendor_spec.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/models/market_vendor_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/lj/Projects/market_money/app/models/market_vendor.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/lj/Projects/market_money/spec/models/vendor_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null,
           1,
           2,
           2,
@@ -70,7 +37,7 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/models/vendor.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/market_vendor.rb": {
         "lines": [
           1,
           1,
@@ -81,7 +48,54 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/spec/requests/api/v0/markets_request_spec.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/models/vendor_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/models/vendor.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/requests/api/v0/market_vendors_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/requests/api/v0/markets_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -181,7 +195,7 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/spec/requests/api/v0/vendors_request_spec.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/spec/requests/api/v0/vendors_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -294,39 +308,7 @@
           1,
           1,
           1,
-          null,
           1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
           null,
           1,
           null,
@@ -337,10 +319,22 @@
           null,
           1,
           1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
           1,
           null,
           null,
-          1,
           1,
           null,
           1,
@@ -355,6 +349,53 @@
           1,
           1,
           null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
           1,
           1,
           null,
@@ -362,7 +403,7 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
         "lines": [
           1,
           1,
@@ -379,13 +420,13 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/controllers/application_controller.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
         "lines": [
           1,
           1,
@@ -407,13 +448,11 @@
           null,
           null,
           null,
-          null,
-          null,
           1,
           null,
+          3,
           2,
-          1,
-          1,
+          2,
           null,
           null,
           null,
@@ -438,6 +477,17 @@
           1,
           null,
           null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          2,
+          1,
+          null,
+          1,
+          1,
           1,
           null,
           null,
@@ -450,18 +500,17 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/serializers/error_serializer.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/serializers/error_serializer.rb": {
         "lines": [
           1,
           null,
           1,
-          4,
+          7,
           null,
           null,
           1,
           null,
-          4,
-          null,
+          7,
           null,
           null,
           null,
@@ -472,20 +521,19 @@
           null
         ]
       },
-      "/Users/lj/Projects/market_money/app/poros/error_message.rb": {
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/poros/error_message.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          4,
-          4,
+          7,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1715903718
+    "timestamp": 1715919219
   }
 }
