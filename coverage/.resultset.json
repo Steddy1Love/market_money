@@ -91,6 +91,38 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
           null,
           null
         ]
@@ -403,6 +435,58 @@
           null
         ]
       },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/market_vendors_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/api/v0/markets_controller.rb": {
         "lines": [
           1,
@@ -417,12 +501,6 @@
           1,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/steddy/Dev/Turing/Mod_3/Projects/market_money/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       },
@@ -534,6 +612,6 @@
         ]
       }
     },
-    "timestamp": 1715919219
+    "timestamp": 1715924667
   }
 }

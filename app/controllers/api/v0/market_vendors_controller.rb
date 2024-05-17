@@ -14,6 +14,7 @@ class Api::V0::MarketVendorsController < ApplicationController
     rescue ActiveRecord::ValidationError => e
       binding.pry
       render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :bad_request
+    end
     # Check if market or vendor does not exist
     if market.nil?
       return render json: { error: "Market not found" }, status: :not_found
