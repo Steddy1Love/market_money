@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-16T22:44:27-07:00">2024-05-16T22:44:27-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-17T09:47:42-07:00">2024-05-17T09:47:42-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  92.03%
+  94.89%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.17
+         1.26
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>301</b> relevant lines,
-    <span class="green"><b>277</b> lines covered</span> and
-    <span class="red"><b>24</b> lines missed. </span>
+    <b>313</b> relevant lines,
+    <span class="green"><b>297</b> lines covered</span> and
+    <span class="red"><b>16</b> lines missed. </span>
     (<span class="green">
-  92.03%
+  94.89%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8bd7072997f52a68fa60018d636264b9f939975a" class="src_link" title="app/controllers/api/v0/market_vendors_controller.rb">app/controllers/api/v0/market_vendors_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">21.05 %</td>
-            <td class="cell--number">42</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">0.21</td>
+            <td class="red strong cell--number t-file__coverage">35.29 %</td>
+            <td class="cell--number">35</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">0.82</td>
             
           </tr>
         
@@ -165,7 +165,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.50</td>
+            <td class="cell--number">3.50</td>
             
           </tr>
         
@@ -176,7 +176,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.40</td>
+            <td class="cell--number">5.00</td>
             
           </tr>
         
@@ -204,19 +204,19 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#19438df6eeb432d4b121f0b0aa1d42bbeb5f0668" class="src_link" title="spec/requests/api/v0/market_vendors_request_spec.rb">spec/requests/api/v0/market_vendors_request_spec.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">60.87 %</td>
-            <td class="cell--number">39</td>
-            <td class="cell--number">23</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">0.61</td>
+            <td class="yellow strong cell--number t-file__coverage">86.49 %</td>
+            <td class="cell--number">62</td>
+            <td class="cell--number">37</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0.86</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#4f6fb5dfce382e52716e6844ad89242980ba5d23" class="src_link" title="spec/requests/api/v0/markets_request_spec.rb">spec/requests/api/v0/markets_request_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">96</td>
+            <td class="cell--number">95</td>
             <td class="cell--number">58</td>
             <td class="cell--number">58</td>
             <td class="cell--number">0</td>
@@ -257,7 +257,7 @@
     <h3>app/controllers/api/v0/market_vendors_controller.rb</h3>
     <h4>
       <span class="red">
-  21.05%
+  35.29%
 </span>
 
       lines covered
@@ -266,9 +266,9 @@
     
 
     <div class="t-line-summary">
-      <b>19</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>15</b> lines missed.</span>
+      <b>17</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
 
     
@@ -323,24 +323,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="5">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    if params[:market_id].blank? || params[:vendor_id].blank?</code>
+            <code class="ruby">    if params[:market_vendor].blank? || params[:market_vendor][:market_id].blank? || params[:market_vendor][:vendor_id].blank?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">      return render json: { error: &quot;market_id and vendor_id are required&quot; }, status: :bad_request</code>
+            <code class="ruby">      render json: { error: &quot;market_id and vendor_id are required&quot; }, status: :bad_request</code>
           </li>
         </div>
       
@@ -362,7 +362,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -384,18 +384,18 @@
 
             
 
-            <code class="ruby">    # Find the Market and Vendor</code>
+            <code class="ruby">      # Find the Market and Vendor</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="11">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="11">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    market = Market.find_by!(id: params[:market_id])</code>
+            
+
+            <code class="ruby">      market = Market.find(id: params[:market_vendor][:market_id])</code>
           </li>
         </div>
       
@@ -406,7 +406,7 @@
 
             
 
-            <code class="ruby">    vendor = Vendor.find_by!(id: params[:vendor_id])</code>
+            <code class="ruby">      vendor = Vendor.find(id: params[:market_vendor][:vendor_id])</code>
           </li>
         </div>
       
@@ -417,7 +417,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">      </code>
           </li>
         </div>
       
@@ -428,7 +428,7 @@
 
             
 
-            <code class="ruby">    rescue ActiveRecord::ValidationError =&gt; e</code>
+            <code class="ruby">      # Check if the MarketVendor association already exists</code>
           </li>
         </div>
       
@@ -439,7 +439,7 @@
 
             
 
-            <code class="ruby">      binding.pry</code>
+            <code class="ruby">      existing_association = MarketVendor.find_by(market_id: market.id, vendor_id: vendor.id)</code>
           </li>
         </div>
       
@@ -450,18 +450,18 @@
 
             
 
-            <code class="ruby">      render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :bad_request</code>
+            <code class="ruby">      if existing_association</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="missed" data-hits="0" data-linenumber="17">
             
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        render json: { error: &quot;MarketVendor association already exists&quot; }, status: :unprocessable_entity</code>
           </li>
         </div>
       
@@ -472,51 +472,51 @@
 
             
 
-            <code class="ruby">    # Check if market or vendor does not exist</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">    if market.nil?</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby">      return render json: { error: &quot;Market not found&quot; }, status: :not_found</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">      # Create the MarketVendor association</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">      market_vendor = MarketVendor.new(market: market, vendor: vendor)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">      if market_vendor.save</code>
           </li>
         </div>
       
@@ -527,29 +527,29 @@
 
             
 
-            <code class="ruby">    if vendor.nil?</code>
+            <code class="ruby">        render json: { message: &quot;Successfully added vendor to market&quot; }, status: :created</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
             
 
-            <code class="ruby">      return render json: { error: &quot;Vendor not found&quot; }, status: :not_found</code>
+            <code class="ruby">      else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="missed" data-hits="0" data-linenumber="25">
             
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        render json: { error: market_vendor.errors.full_messages.join(&quot;, &quot;) }, status: :unprocessable_entity</code>
           </li>
         </div>
       
@@ -560,40 +560,40 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="27">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    # Check if the MarketVendor association already exists</code>
+            
+
+            <code class="ruby">    rescue ActiveRecord::RecordNotFound =&gt; e</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="28">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="28">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    existing_association = MarketVendor.find_by(market_id: market.id, vendor_id: vendor.id)</code>
+            
+
+            <code class="ruby">      render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :not_found</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
             
 
-            <code class="ruby">    if existing_association</code>
+            <code class="ruby">    rescue ActiveRecord::RecordInvalid =&gt; e</code>
           </li>
         </div>
       
@@ -604,7 +604,7 @@
 
             
 
-            <code class="ruby">      return render json: { error: &quot;MarketVendor association already exists&quot; }, status: :unprocessable_entity</code>
+            <code class="ruby">      render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :not_found</code>
           </li>
         </div>
       
@@ -615,18 +615,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    rescue ActionController::ParameterMissing =&gt; e</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="missed" data-hits="0" data-linenumber="32">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :bad_request</code>
           </li>
         </div>
       
@@ -637,89 +637,12 @@
 
             
 
-            <code class="ruby">    # Create the MarketVendor association</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">    market_vendor = MarketVendor.new(market: market, vendor: vendor)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">    if market_vendor.save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby">      render json: { message: &quot;Successfully added vendor to market&quot; }, status: :created</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="39">
-            
-            
-
-            
-
-            <code class="ruby">      render json: { error: market_vendor.errors.full_messages.join(&quot;, &quot;) }, status: :unprocessable_entity</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
-            
-
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -730,7 +653,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -877,7 +800,7 @@
 
             
 
-            <code class="ruby">      render json: { errors: [{ detail: &quot;Couldn&#39;t find Market with &#39;id&#39;=#{params[:id]}&quot;}]}, status: :not_found</code>
+            <code class="ruby">      render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :not_found</code>
           </li>
         </div>
       
@@ -2210,8 +2133,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="5">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="11" data-linenumber="5">
+            <span class="hits">11</span>
             
 
             
@@ -2318,8 +2241,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="4">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="11" data-linenumber="4">
+            <span class="hits">11</span>
             
 
             
@@ -2373,8 +2296,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="9">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="11" data-linenumber="9">
+            <span class="hits">11</span>
             
 
             
@@ -2949,8 +2872,8 @@
   <div class="header">
     <h3>spec/requests/api/v0/market_vendors_request_spec.rb</h3>
     <h4>
-      <span class="red">
-  60.87%
+      <span class="yellow">
+  86.49%
 </span>
 
       lines covered
@@ -2959,9 +2882,9 @@
     
 
     <div class="t-line-summary">
-      <b>23</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <b>37</b> relevant lines.
+      <span class="green"><b>32</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
 
     
@@ -3115,29 +3038,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      post &quot;/api/v0/market_vendors&quot;, params: JSON.generate(market_vendor: market_vendor_params)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      created_association = MarketVendor.last</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -3148,24 +3049,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      expect(response).to be_successful</code>
+            <code class="ruby">      post &quot;/api/v0/market_vendors&quot;, params: { market_vendor: market_vendor_params }</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      created_association = MarketVendor.last</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
             
 
-            <code class="ruby">      expect(created_association.market_id).to eq(market1.id)</code>
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to have_http_status(:created)</code>
           </li>
         </div>
       
@@ -3176,29 +3099,29 @@
 
             
 
+            <code class="ruby">      expect(response).to be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_association.market_id).to eq(market1.id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="21">
+            
+            
+
+            
+
             <code class="ruby">      expect(created_association.vendor_id).to eq(vendor2.id)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -3214,117 +3137,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &quot;Sad paths&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    xit &quot;Endpoint 8 sad path 1&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">      vendor = create(:vendor)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">      market_vendor_params = ({</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">        market_id: 123123123,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">        vendor_id: vendor.id</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">      })</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">      post &quot;/api/v0/market_vendors&quot;, params: JSON.generate(market_vendor: market_vendor_params)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="33">
+          <li class="missed" data-hits="0" data-linenumber="23">
             
             
 
@@ -3335,40 +3148,18 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="34">
+          <li class="missed" data-hits="0" data-linenumber="24">
             
             
 
             
 
-            <code class="ruby">      expect(response).to_not be_successful</code>
+            <code class="ruby">      expect(data[:message]).to eq(&quot;Successfully added vendor to market&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby">      expect(data[:errors]).to be_a(Array)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">      expect(data[:errors].first[:detail]).to eq(&quot;Validation failed: Market must exist&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -3379,7 +3170,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -3390,7 +3181,392 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &quot;Sad paths&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;Endpoint 8 sad path 1&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="30">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      vendor = create(:vendor)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      id = 123123123</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">      market_vendor_params = ({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="33">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        market_id: id,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">        vendor_id: vendor.id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">      })</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post &quot;/api/v0/market_vendors&quot;, params: { market_vendor: market_vendor_params }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      data = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to_not be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(data[:errors]).to be_an(Array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(data[:errors].first[:detail]).to eq(&quot;Couldn&#39;t find Market with &#39;id&#39;={:id=&gt;\&quot;#{id}\&quot;}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;Endpoint 8 sad path 2&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      vendor1 = create(:vendor)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      market1 = create(:market)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      market_vendor1 = create(:market_vendor, market: market1, vendor: vendor1)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">      market_vendor_params = ({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        market_id: market1.id,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby">        vendor_id: vendor1.id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">      })</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="54">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post &quot;/api/v0/market_vendors&quot;, params: { market_vendor: market_vendor_params }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      data = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to_not be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(data[:errors]).to be_an(Array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(data[:errors].first[:detail]).to eq(&quot;Validation failed: Market vendor asociation between market with market_id=#{market1.id} and vendor_id=#{vendor1.id} already exists&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -4461,23 +4637,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="95">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="96">
+          <li class="never" data-hits="" data-linenumber="95">
             
             
 
