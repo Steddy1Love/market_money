@@ -42,6 +42,9 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
           null
         ]
       },
@@ -89,14 +92,43 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
           null,
           1,
           null,
+          null,
+          1,
           1,
           null,
           1,
           1,
           2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -386,10 +418,21 @@
         "lines": [
           1,
           1,
-          1,
+          null,
+          2,
           1,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
+          null,
           null,
           null
         ]
@@ -397,6 +440,41 @@
       "/Users/lj/Projects/market_money/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/serializers/error_serializer.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lj/Projects/market_money/app/poros/error_message.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
           null
         ]
       },
@@ -481,43 +559,8 @@
           null,
           null
         ]
-      },
-      "/Users/lj/Projects/market_money/app/serializers/error_serializer.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          4,
-          null,
-          null,
-          1,
-          null,
-          4,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/lj/Projects/market_money/app/poros/error_message.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1715914086
+    "timestamp": 1715963569
   }
 }
