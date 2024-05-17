@@ -91,6 +91,5 @@ RSpec.describe "Markets API", type: :request do
 
     expect(message[:errors]).to be_an(Array)
     expect(message[:errors].first[:detail]).to eq("Couldn't find Market with 'id'=#{id_fail}")
-
   end
 end

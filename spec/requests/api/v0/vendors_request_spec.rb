@@ -106,6 +106,23 @@ RSpec.describe "Vendor API", type: :request do
     end
   end
 
+  describe "Endpoint 7" do
+    it "can delete an existing vendor" do
+      vendor = create(:vendor)
+      id = vendor.id
+
+      delete "/api/v0/vendors/#{id}"
+
+      expect(response).to be_successful
+      expect(response.status).to eq(204)
+
+      get "/api/v0/vendors/#{id}"
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+    end
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a vendor id doesn't exist" do
       get "/api/v0/vendors/1"
@@ -116,8 +133,7 @@ RSpec.describe "Vendor API", type: :request do
       data = JSON.parse(response.body, symbolize_names: true)
       
       expect(data[:errors]).to be_a(Array)
-      expect(data[:errors].first[:status]).to eq("404")
-      expect(data[:errors].first[:title]).to eq("Couldn't find Vendor with 'id'=1")
+      expect(data[:errors].first[:detail]).to eq("Couldn't find Vendor with 'id'=1")
     end
 
     it "will vaildate contact name and contact number" do
@@ -135,7 +151,7 @@ RSpec.describe "Vendor API", type: :request do
       expect(response.status).to eq(400)
 
       data = JSON.parse(response.body, symbolize_names: true)
-      expect(data[:errors].first[:title]).to eq("Validation failed: Contact name can't be blank, Contact phone can't be blank")
+      expect(data[:errors].first[:detail]).to eq("Validation failed: Contact name can't be blank, Contact phone can't be blank")
     end
 
     it "will gracefully handle if a vendor id doesn't exist update" do
@@ -151,8 +167,7 @@ RSpec.describe "Vendor API", type: :request do
       data = JSON.parse(response.body, symbolize_names: true)
       
       expect(data[:errors]).to be_a(Array)
-      expect(data[:errors].first[:status]).to eq("404")
-      expect(data[:errors].first[:title]).to eq("Couldn't find Vendor with 'id'=1")
+      expect(data[:errors].first[:detail]).to eq("Couldn't find Vendor with 'id'=1")
     end
 
     it "will vaildate contact name update" do
@@ -171,7 +186,19 @@ RSpec.describe "Vendor API", type: :request do
       expect(response.status).to eq(400)
 
       data = JSON.parse(response.body, symbolize_names: true)
-      expect(data[:errors].first[:title]).to eq("Validation failed: Contact name can't be blank")
+      expect(data[:errors].first[:detail]).to eq("Validation failed: Contact name can't be blank")
+    end
+
+    it "Endpoint 7" do
+      id = 123123123
+
+      delete "/api/v0/vendors/#{id}"
+
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      expect(data[:errors].first[:detail]).to eq("Couldn't find Vendor with 'id'=#{id}")
     end
   end
 end

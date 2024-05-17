@@ -14,9 +14,7 @@ class Api::V0::VendorsController < ApplicationController
       end
       render json: { data: vendors_data }, status: :ok
     rescue StandardError => e
-      render json: { errors: [{
-            detail: "Couldn't find Market with 'id'=#{params[:market_id]}"
-        }]}, status: :not_found
+      render json: ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :not_found
     end
   end
 
@@ -24,7 +22,7 @@ class Api::V0::VendorsController < ApplicationController
     begin
       render json: Vendor.find(params[:id]) 
     rescue ActiveRecord::RecordNotFound => exception
-      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 404)).serialize_json, status: :not_found
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message)).serialize_json, status: :not_found
     end
   end
 
@@ -35,7 +33,7 @@ class Api::V0::VendorsController < ApplicationController
   
       render json: vendor    
     rescue ActiveRecord::RecordInvalid => exception
-      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 400)).serialize_json, status: :bad_request
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message)).serialize_json, status: :bad_request
     end
   end
 
@@ -46,10 +44,21 @@ class Api::V0::VendorsController < ApplicationController
   
       render json: vendor
     rescue ActiveRecord::RecordNotFound => exception
-      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 404)).serialize_json, status: :not_found
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message)).serialize_json, status: :not_found
 
     rescue ActiveRecord::RecordInvalid => exception
-      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 400)).serialize_json, status: :bad_request
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message)).serialize_json, status: :bad_request
+    end
+  end
+
+  def destroy
+    begin
+      vendor = Vendor.find(params[:id])
+      vendor.destroy
+
+      head :no_content
+    rescue ActiveRecord::RecordNotFound => e
+      render json:  ErrorSerializer.new(ErrorMessage.new(e.message)).serialize_json, status: :not_found
     end
   end
 
