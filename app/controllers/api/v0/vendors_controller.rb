@@ -35,7 +35,21 @@ class Api::V0::VendorsController < ApplicationController
   
       render json: vendor    
     rescue ActiveRecord::RecordInvalid => exception
-      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 400)).serialize_json, status: :not_found
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 400)).serialize_json, status: :bad_request
+    end
+  end
+
+  def update
+    begin
+      vendor = Vendor.find(params[:id])
+      vendor.update!(vendor_params)
+  
+      render json: vendor
+    rescue ActiveRecord::RecordNotFound => exception
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 404)).serialize_json, status: :not_found
+
+    rescue ActiveRecord::RecordInvalid => exception
+      render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 400)).serialize_json, status: :bad_request
     end
   end
 

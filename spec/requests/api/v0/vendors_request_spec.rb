@@ -89,6 +89,23 @@ RSpec.describe "Vendor API", type: :request do
     end
   end
 
+  describe "User Story 6" do
+    it "can update an existing vendor" do
+      id = create(:vendor).id
+      previous_name = Vendor.last.name
+      vendor_params = { name: "Charlotte's Web" }
+      headers = {"CONTENT_TYPE" => "application/json"}
+    
+      # We include this header to make sure that these params are passed as JSON rather than as plain text
+      patch "/api/v0/vendors/#{id}", headers: headers, params: JSON.generate({vendor: vendor_params})
+      vendor = Vendor.find_by(id: id)
+    
+      expect(response).to be_successful
+      expect(vendor.name).to_not eq(previous_name)
+      expect(vendor.name).to eq("Charlotte's Web")
+    end
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a vendor id doesn't exist" do
       get "/api/v0/vendors/1"
@@ -115,10 +132,46 @@ RSpec.describe "Vendor API", type: :request do
       post "/api/v0/vendors", headers: headers, params: JSON.generate(vendor: vendor_params)
 
       expect(response).to_not be_successful
-      expect(response.status).to eq(404)
+      expect(response.status).to eq(400)
 
       data = JSON.parse(response.body, symbolize_names: true)
       expect(data[:errors].first[:title]).to eq("Validation failed: Contact name can't be blank, Contact phone can't be blank")
+    end
+
+    it "will gracefully handle if a vendor id doesn't exist update" do
+      vendor_params = { name: "Charlotte's Web" }
+      headers = {"CONTENT_TYPE" => "application/json"}
+    
+      # We include this header to make sure that these params are passed as JSON rather than as plain text
+      patch "/api/v0/vendors/1", headers: headers, params: JSON.generate({vendor: vendor_params})
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+
+      data = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(data[:errors]).to be_a(Array)
+      expect(data[:errors].first[:status]).to eq("404")
+      expect(data[:errors].first[:title]).to eq("Couldn't find Vendor with 'id'=1")
+    end
+
+    it "will vaildate contact name update" do
+      id = create(:vendor).id
+      vendor_params = ({
+                      name: 'Murder Inc.',
+                      description: 'Filled with suspense.',
+                      contact_name: '',
+                      contact_phone: '720-888-9988',
+                      credit_accepted: false
+                    })
+      headers = {"CONTENT_TYPE" => "application/json"}
+      patch "/api/v0/vendors/#{id}", headers: headers, params: JSON.generate({vendor: vendor_params})
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:errors].first[:title]).to eq("Validation failed: Contact name can't be blank")
     end
   end
 end
